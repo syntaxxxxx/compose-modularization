@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk rootProject.ext.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion '1.5.10'
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.main.coreKtx
+    implementation rootProject.ext.main.appCompat
+    implementation rootProject.ext.main.googleMaterial
+    implementation rootProject.ext.main.composeUi
+    implementation rootProject.ext.main.composeMaterial
+    implementation rootProject.ext.main.uiTooling
+    implementation rootProject.ext.main.uiToolingPreview
+    implementation rootProject.ext.main.activityCompose
+
+    implementation rootProject.ext.architectureComponents.lifecycleKtx
+
+    testImplementation rootProject.ext.testing.junit
+    testImplementation rootProject.ext.testing.composeJunit
+    androidTestImplementation rootProject.ext.testing.extJunit
+    androidTestImplementation rootProject.ext.testing.espressoCore
+}

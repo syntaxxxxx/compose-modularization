@@ -1,0 +1,57 @@
+ext {
+
+    compileSdk = 31
+
+    applicationId = "com.example.composemodularization"
+    minSdk = 21
+    targetSdk = 31
+    versionCode = 1
+    versionName = "1.0"
+
+    main = [
+            "kotlin"                    : "org.jetbrains.kotlin:kotlin-stdlib:1.5.10",
+            "coreKtx"                   : "androidx.core:core-ktx:1.6.0",
+            "appCompat"                 : "androidx.appcompat:appcompat:1.3.1",
+            "googleMaterial"            : "com.google.android.material:material:1.3.0",
+            "composeUi"                 : "androidx.compose.ui:ui:$compose_version",
+            "composeMaterial"           : "androidx.compose.material:material:$compose_version",
+            "uiTooling"                 : "androidx.compose.ui:ui-tooling:$compose_version",
+            "uiToolingPreview"          : "androidx.compose.ui:ui-tooling-preview:$compose_version",
+            "activityCompose"           : "androidx.activity:activity-compose:1.3.1"
+    ]
+
+    testing = [
+            "junit"                     : "junit:junit:4.+",
+            "composeJunit"              : "androidx.compose.ui:ui-test-junit4:$compose_version",
+            "extJunit"                  : "androidx.test.ext:junit:1.1.2",
+            "espressoCore"              : "androidx.test.espresso:espresso-core:3.3.0",
+    ]
+
+    architectureComponents = [
+            "viewmodelKtx"              : "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1",
+            "livedataKtx"               : "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1",
+            "collectionKtx"             : "androidx.collection:collection-ktx:1.1.0",
+            "fragmentKtx"               : "androidx.fragment:fragment-ktx:1.3.4",
+            "lifecycleKtx"              : "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
+    ]
+
+    misc = [
+            "coroutinesCore"            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3",
+            "coroutinesAndroid"         : "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3",
+//            "okhttp"                    : "com.squareup.okhttp3:okhttp:3.12.5",
+//            "loggingInterceptor"        : "com.squareup.okhttp3:logging-interceptor:3.12.5",
+//            "retrofit"                   : "com.squareup.retrofit2:retrofit:2.6.0",
+//            "converterMoshi"            : "com.squareup.retrofit2:converter-moshi:2.5.0",
+//            "moshi"                     : "com.squareup.moshi:moshi:1.8.0",
+//            "moshiKotlin"               : "com.squareup.moshi:moshi-kotlin:1.8.0",
+//            "glide"                     : "com.github.bumptech.glide:glide:4.8.0",
+//            "hiltAndroid"               : "com.google.dagger:hilt-android:2.35",
+//            "hiltAndroidCompiler"       : "com.google.dagger:hilt-android-compiler:2.35",
+//            "koinCore"                  : "io.insert-koin:koin-core:3.1.2",
+//            "koinAndroid"               : "io.insert-koin:koin-android:3.1.2",
+//            "koinAndroidScope"          : "io.insert-koin:koin-androidx-scope:3.1.2",
+//            "koinAndroidViewModel"      : "io.insert-koin:koin-android-viewmodel:3.1.2",
+//            "koinAndroidFragment"       : "io.insert-koin:koin-androidx-fragment:3.1.2"
+    ]
+
+}
